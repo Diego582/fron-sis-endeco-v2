@@ -8,13 +8,13 @@ import store from "./store/store";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#565a85",
+      main: "#0C5C94",
     },
     secondary: {
-      main: "#7A776C",
+      main: "#668296",
     },
     tertiary: {
-      main: "#EBBA07",
+      main: "#EBAD52",
     },
     fourth: {
       main: "#F8F8F8",
