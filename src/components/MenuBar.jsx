@@ -7,16 +7,23 @@ import {
   Tooltip,
 } from "@mui/material";
 import React from "react";
-import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
-import StoreIcon from "@mui/icons-material/Store";
+import CalculateIcon from "@mui/icons-material/Calculate";
+import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import GroupIcon from "@mui/icons-material/Group";
 import FeedIcon from "@mui/icons-material/Feed";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
-import WidgetsIcon from "@mui/icons-material/Widgets";
+import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
+import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import { Link } from "react-router-dom";
 
 export default function MenuBar() {
-  const categories = ["Ventas", "Compras", "Clientes", "Productos", "Reportes"];
+  const categories = [
+    "Mesa de Entradas",
+    "Contaduria",
+    "Tesoreria",
+    "Creditos",
+    "Reportes",
+  ];
 
   return (
     <Box
@@ -33,18 +40,21 @@ export default function MenuBar() {
       <List>
         {categories.map((text, index) => (
           <ListItem key={index} disablePadding>
-            <Link to={text.toLowerCase()} style={{ textDecoration: "none" }}>
+            <Link
+              to={text.toLowerCase().replace(/ /g, "")}
+              style={{ textDecoration: "none" }}
+            >
               <ListItemButton>
                 <Tooltip title={text}>
                   <ListItemIcon sx={{ pt: 2, pb: 2 }}>
-                    {text === "Ventas" ? (
-                      <ShoppingCartCheckoutIcon sx={{ color: "white" }} />
-                    ) : text === "Compras" ? (
-                      <StoreIcon sx={{ color: "white" }} />
-                    ) : text === "Productos" ? (
-                      <WidgetsIcon sx={{ color: "white" }} />
-                    ) : text === "Clientes" ? (
-                      <GroupIcon sx={{ color: "white" }} />
+                    {text === "Mesa de Entradas" ? (
+                      <LibraryBooksIcon sx={{ color: "white" }} />
+                    ) : text === "Contaduria" ? (
+                      <CalculateIcon sx={{ color: "white" }} />
+                    ) : text === "Tesoreria" ? (
+                      <AccountBalanceIcon sx={{ color: "white" }} />
+                    ) : text === "Creditos" ? (
+                      <CurrencyExchangeIcon sx={{ color: "white" }} />
                     ) : (
                       <FeedIcon sx={{ color: "white" }} />
                     )}
