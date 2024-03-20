@@ -19,7 +19,7 @@ export default function NavBar() {
       >
         <Toolbar>
           <Box sx={{ flexGrow: 1, p: 2 }}>
-            <img src="./logo.png" style={{ width: "100px" }} />
+            <img src="./logo.jpg" style={{ height: "8vh" }} />
           </Box>
           <Button color="primary">Login</Button>
         </Toolbar>
