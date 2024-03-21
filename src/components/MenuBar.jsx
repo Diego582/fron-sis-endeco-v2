@@ -37,7 +37,7 @@ export default function MenuBar() {
         justifyContent: "space-between",
       }}
     >
-      <List>
+      <List >
         {categories.map((text, index) => (
           <ListItem key={index} disablePadding>
             <Link

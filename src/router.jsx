@@ -8,11 +8,12 @@ import Accountancy from "./pages/Accountancy";
 import Treasury from "./pages/Treasury";
 import Credits from "./pages/Credits";
 import Reports from "./pages/Reports";
+import Private from "./store/actions/Private";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout />,
+    element: <Private><MainLayout /></Private>,
     children: [
       {
         path: "/",
