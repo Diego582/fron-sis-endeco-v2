@@ -31,7 +31,7 @@ export default function NavBar() {
           <Box sx={{ flexGrow: 1, p: 2 }}>
             <img src="./logo.jpg" style={{ height: "8vh" }} />
           </Box>
-          {user ? (
+          {user && user.name ? (
             <Box sx={{ display: { xs: "none", sm: "flex" } }}>
               <IconButton sx={{ color: "white" }} onClick={handleLogout}>
                 <Avatar sx={{ backgroundColor: "primary.main" }}>
