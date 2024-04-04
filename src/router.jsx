@@ -13,7 +13,7 @@ import Private from "./store/actions/Private";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Private><MainLayout /></Private>,
+    element: <MainLayout />,
     children: [
       {
         path: "/",
