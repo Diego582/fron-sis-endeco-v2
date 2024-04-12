@@ -9,6 +9,9 @@ import Treasury from "./pages/Treasury";
 import Credits from "./pages/Credits";
 import Reports from "./pages/Reports";
 import Private from "./store/actions/Private";
+import NotesSend from "./pages/Income/NotesSend";
+import NotesReceived from "./pages/Income/NotesReceived";
+import Files from "./pages/Income/Files";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +27,9 @@ const router = createBrowserRouter([
       { path: "/tesoreria", element: <Treasury /> },
       { path: "/creditos", element: <Credits /> },
       { path: "/reportes", element: <Reports /> },
+      { path: "/notasenviadas", element: <NotesSend /> },
+      { path: "/notasrecibidas", element: <NotesReceived /> },
+      { path: "/expedientes", element: <Files /> },
     ],
   },
   {
